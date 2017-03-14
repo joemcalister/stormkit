@@ -2,7 +2,8 @@
 import csv
 import string
 import decimal
-import os 
+import os
+import sys
        
 #### SENTIMENT CLASS ####        
 class SentimentResult:
@@ -109,7 +110,11 @@ class MultiMoodSentimentAnalysis:
             if "#" in word: 
                 word = word.replace("#","")
             #remove punctation that may have stuck to words
-            word = word.translate(string.punctuation)
+            if sys.version_info >= (3,0):
+                word = word.translate(string.punctuation)
+            else:
+                word = word.translate(None, string.punctuation)
+            
             #set final value
             words[index] = word
 
