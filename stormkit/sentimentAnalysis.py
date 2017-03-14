@@ -94,8 +94,6 @@ class MultiMoodSentimentAnalysis:
         
     def get_skew(self, current_emotion, sentance):
         # return array of elements in both arrays
-        print(current_emotion)
-        print(sentance)
         return [x for x in current_emotion if x in sentance]
     
 
