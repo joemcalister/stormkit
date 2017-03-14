@@ -110,7 +110,7 @@ class MultiMoodSentimentAnalysis:
             #remove any punctuation
             punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
             no_punctuation = ""
-            for char in my_str:
+            for char in word:
                 if char not in punctuation:
                     no_punctuation = no_punctuation + char
             word = no_punctuation
