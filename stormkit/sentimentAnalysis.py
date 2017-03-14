@@ -109,7 +109,7 @@ class MultiMoodSentimentAnalysis:
             if "#" in word: 
                 word = word.replace("#","")
             #remove punctation that may have stuck to words
-            word = word.translate(None, string.punctuation)
+            word = word.translate(string.punctuation)
             #set final value
             words[index] = word
 
