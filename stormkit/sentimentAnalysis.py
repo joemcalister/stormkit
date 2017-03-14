@@ -65,9 +65,15 @@ class MultiMoodSentimentAnalysis:
         for filedict in self.word_dict_filenames:
             with open(filedict[1], 'rb') as f:
                 temparray = f.readlines()
+                #check for error reading words from lines
+                if len(temparray) == 0:
+                    raise Exception("No words found in dictionary, installation likely corrupt.");
                 #strip whitespace too
                 temparray = [x.strip() for x in temparray]
-                self.word_dict[filedict[0]] = temparray          
+                self.word_dict[filedict[0]] = temparray
+            #check that dictionaries are full, otherwise there's an issue
+            if len(self.word_dict) == 0:
+                raise Exception("Word dictionaries are empty, check installation of module.")
 
     def analyse_text(self,tweet):
         #individual words
