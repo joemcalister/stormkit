@@ -1,11 +1,13 @@
-#stormkit
+# stormkit
 This is a collection of tools created by me to help with my own artwork. It currently includes multiple-mood sentiment anlaysis (based on the bag of words model). Soon to include other tools including point of speech tagging.
 
-##How to install
+## How to install
 Easiest to install via pip:
 ```Shellscript
 pip install stormkit
 ```
+
+***
 
 ### Multiple Mood Sentiment Analaysis
 This class can be used to determine the sentiment in text, for example the percentage of anger, sadness. It currently supports, positivity, negativity, anger, worry, sadness and scare.
@@ -49,3 +51,18 @@ result.decimals
 # the specified emotion, for example ["sad", "upset"]
 result.words_for_emotion("angry")
 ```
+
+***
+
+### Atrributions
+The two word list files 'neg-lex.txt' and 'pos-lex.txt' are from http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html and are based on the following papers:
+
+Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews." Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD-2004), Aug 22-25, 2004, Seattle, Washington, USA,
+http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
+
+Bing Liu, Minqing Hu and Junsheng Cheng. "Opinion Observer: Analyzing 
+and Comparing Opinions on the Web." Proceedings of the 14th 
+International World Wide Web conference (WWW-2005), May 10-14, 
+2005, Chiba, Japan.
+
+The word list files 'angry-lex.txt', 'sad-lex.txt', 'worry-lex.txt' and 'scared-lex.txt' were created by me.
