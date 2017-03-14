@@ -30,7 +30,7 @@ result = sen.analyse_text("I hate Trump, I'm furious, but I love ice cream.")
 To check if any errors occurred simply check the error variable, this should be done whenever creating a new 'SentimentResult' object
 ```python
 if result.error is None:
-    print(result.percentages)
+    print(result.decimals)
 else:
     print(result.error)
 ```
