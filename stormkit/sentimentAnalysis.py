@@ -98,7 +98,7 @@ class MultiMoodSentimentAnalysis:
             #every word to analyse
             for word in sentance:
                 
-                if word is catword:
+                if str(word) == str(catword):
                     print("found a word")
                     found_words.append(word)
                 else:
