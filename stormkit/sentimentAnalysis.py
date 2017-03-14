@@ -88,6 +88,7 @@ class MultiMoodSentimentAnalysis:
                           "emotion":current_emotion,
                           "words":returnedArray})
         #parse final results
+        print(skews)
         sen = SentimentResult(skews)
         return sen
 
