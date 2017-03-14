@@ -94,9 +94,9 @@ class MultiMoodSentimentAnalysis:
                 if word == catword:
                     found_words.append(word)
                 else:
-                    #check for partial words -- !!! this may be problematic !!!
-                    if word.find(catword) != -1:
-                        found_words.append(word)
+                    #check for partial words -- !!! revisit !!!
+                    #if word.find(catword) != -1:
+                    #    found_words.append(word)
 
         return found_words
     
