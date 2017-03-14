@@ -80,6 +80,7 @@ class MultiMoodSentimentAnalysis:
         words = tweet.split(' ')
         #remove words
         words = self.remove_noise(words)
+        print(words)
         #get skews
         skews = []
         for current_emotion in self.word_dict:
@@ -88,7 +89,6 @@ class MultiMoodSentimentAnalysis:
                           "emotion":current_emotion,
                           "words":returnedArray})
         #parse final results
-        print(skews)
         sen = SentimentResult(skews)
         return sen
 
