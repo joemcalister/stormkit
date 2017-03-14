@@ -97,8 +97,9 @@ class MultiMoodSentimentAnalysis:
         for catword in current_emotion:
             #every word to analyse
             for word in sentance:
-                #print("itteration")
+                
                 if word is catword:
+                    print("found a word")
                     found_words.append(word)
                 else:
                     #check for partial words -- !!! revisit !!!
