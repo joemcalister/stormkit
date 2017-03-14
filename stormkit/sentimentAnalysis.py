@@ -93,13 +93,12 @@ class MultiMoodSentimentAnalysis:
 
         
     def get_skew(self, current_emotion, sentance):
-        print(current_emotion)
-        print(sentance)
         found_words = []
         for catword in current_emotion:
             #every word to analyse
             for word in sentance:
                 if word == catword:
+                    print("found a word")
                     found_words.append(word)
                 else:
                     #check for partial words -- !!! revisit !!!
