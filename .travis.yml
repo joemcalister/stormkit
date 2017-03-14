@@ -1,18 +1,16 @@
-language: python
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  # PyPy versions
-  - "pypy"  # PyPy2 2.5.0
-  - "pypy3" # Pypy3 2.4.0
-  - "pypy-5.3.1"
-# command to install dependencies
-install:
-  - pip install .
-  - pip install -r requirements.txt
-# command to run tests
-script: pytest
+# this file is *not* meant to cover or endorse the use of travis, but rather to
+# help confirm pull requests to this project.
 
+language: python
+
+env:
+  - TOXENV=py27
+  - TOXENV=py33
+  - TOXENV=py34
+
+install: pip install tox
+
+script: tox
+
+notifications:
+  email: false
