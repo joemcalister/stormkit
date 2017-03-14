@@ -35,7 +35,7 @@ class SentimentResult:
             if (total > 0):
                 ## double float cast fixes interesting type bug
                 ## round to two decimal places
-                self.decimals[result["emotion"]] = float(result["occurences"])/total)
+                self.decimals[result["emotion"]] = float(result["occurences"])/total
             else:
                 self.decimals[result["emotion"]] = 0;
 
