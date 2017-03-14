@@ -107,15 +107,13 @@ class MultiMoodSentimentAnalysis:
         for index, word in enumerate(words):
             #strip case
             word = word.lower()
-            #check for hashtags
-            if "#" in word: 
-                word = word.replace("#","")
-            #remove punctation that may have stuck to words
-            if sys.version_info >= (3,0):
-                word = word.translate(string.punctuation)
-            else:
-                word = word.translate(None, string.punctuation)
-            
+            #remove any punctuation
+            punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+            no_punctuation = ""
+            for char in my_str:
+                if char not in punctuation:
+                    no_punctuation = no_punctuation + char
+            word = no_punctuation
             #set final value
             words[index] = word
 
