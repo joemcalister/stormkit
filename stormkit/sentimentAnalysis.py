@@ -93,20 +93,10 @@ class MultiMoodSentimentAnalysis:
 
         
     def get_skew(self, current_emotion, sentance):
-        #found_words = []
-        #for catword in current_emotion:
-            #every word to analyse
-            #    for word in sentance:
-            #        if str(word) == str(catword):
-            #        print("found a word")
-            #        found_words.append(word)
-            #    else:
-                    #check for partial words -- !!! revisit !!!
-                    #if word.find(catword) != -1:
-                    #    found_words.append(word)
-                    #        pass
-
-        return [ x for x in current_emotion if x in sentance ]
+        # return array of elements in both arrays
+        print(current_emotion)
+        print(sentance)
+        return [x for x in current_emotion if x in sentance]
     
 
     def remove_noise(self,words):
