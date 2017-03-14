@@ -1,5 +1,5 @@
 # stormkit
-[![PyPI version](https://badge.fury.io/py/stormkit.svg)](https://badge.fury.io/py/stormkit)
+[![PyPI version](https://badge.fury.io/py/stormkit.svg)](https://badge.fury.io/py/stormkit) [![Build Status](https://travis-ci.org/joemcalister/stormkit.svg?branch=master)](https://travis-ci.org/joemcalister/stormkit)
 
 This is a collection of tools created by me to help with my own artwork. It currently includes multiple-mood sentiment analysis (based on the bag of words model). Soon to include other tools including point of speech tagging.
 
@@ -21,7 +21,7 @@ from stormkit.sentimentAnalysis import *
 
 To initiate the class call
 ```python
-sentiment = BasicSentimentAnalysis()
+sentiment = MultiMoodSentimentAnalysis()
 ```
 To analyse a string call the function analyse_text(), this will return a 'SentimentResult' object
 ```python
@@ -30,9 +30,9 @@ result = sen.analyse_text("I hate Trump, I'm furious, but I love ice cream.")
 To check if any errors occurred simply check the error variable, this should be done whenever creating a new 'SentimentResult' object
 ```python
 if result.error is None:
-    print result.percentages
+    print(result.percentages)
 else:
-    print result.error
+    print(result.error)
 ```
 To get the results of the sentiment analysis use one of the following
 ```python
