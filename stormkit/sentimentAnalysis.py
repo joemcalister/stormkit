@@ -63,7 +63,7 @@ class MultiMoodSentimentAnalysis:
     def __init__(self):
         #load in our word dictionaries
         for filedict in self.word_dict_filenames:
-            with open(filedict[1], 'rb') as f:
+            with open(filedict[1], 'r') as f:
                 temparray = f.readlines()
                 #check for error reading words from lines
                 if len(temparray) == 0:
